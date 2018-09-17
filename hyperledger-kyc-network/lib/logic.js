@@ -25,18 +25,18 @@
 * Creates a new user with a hashed_id and a UserData object, contatined in the
 * createUser transaction passed into this function. The default user access value
 * is true. The user will be added to the ParticipantRegistry.
-* @param {org.acme.biznet.createUser} createUser The createUser transaction.
+* @param {org.kyc.createUser} createUser The createUser transaction.
 * @transaction
 */
 function createUser(createUser) {
   
     var newUser;
 
-  return getParticipantRegistry('org.acme.biznet.User')
+  return getParticipantRegistry('org.kyc.User')
   .then(function (userRegistry) {
       
         // create new instance of a User
-      newUser = getFactory().newResource('org.acme.biznet', 'User', createUser.hashed_id);
+      newUser = getFactory().newResource('org.kyc', 'User', createUser.hashed_id);
 
       newUser.hashed_id = createUser.hashed_id;
       newUser.userData = createUser.userData;
@@ -46,7 +46,7 @@ function createUser(createUser) {
   })
   .then(function () {
       // Emit an event for the new user creation.
-      var event = getFactory().newEvent('org.acme.biznet', 'NewUserCreated');
+      var event = getFactory().newEvent('org.kyc', 'NewUserCreated');
       event.user = newUser;
       emit(event);
   });
@@ -54,24 +54,24 @@ function createUser(createUser) {
 
 /**
 * Deletes a user with a specific hashed_id.
-* @param {org.acme.biznet.deleteUser} deleteUser The deleteUser transaction.
+* @param {org.kyc.deleteUser} deleteUser The deleteUser transaction.
 * @transaction
 */
 function deleteUser(deleteUser) {
 
-  return getParticipantRegistry('org.acme.biznet.User')
+  return getParticipantRegistry('org.kyc.User')
   .then(function (userRegistry) {
       return userRegistry.get(deleteUser.hashed_id);
   })
   .then(function (existingUser) {
-      getParticipantRegistry('org.acme.biznet.User')
+      getParticipantRegistry('org.kyc.User')
       .then(function(userRegistry) {
           return userRegistry.remove(existingUser);
       });
   })
   .then(function () {
       // Emit an event for the new user deletion.
-      var event = getFactory().newEvent('org.acme.biznet', 'UserDeleted');
+      var event = getFactory().newEvent('org.kyc', 'UserDeleted');
       event.deleted_id = deleteUser.hashed_id;
       emit(event);
   });
@@ -82,7 +82,7 @@ function deleteUser(deleteUser) {
 * user access value is false.The user data is specified in the UserData object assigned to 
 * this transaction. The ParticipantRegistry is updated and a UserEncryptedDataUpdated
 * event is emitted.
-* @param {org.acme.biznet.updateUserEncryptedData} updateUserData The updateUserData transaction.
+* @param {org.kyc.updateUserEncryptedData} updateUserData The updateUserData transaction.
 * @transaction
 */
 function updateUserEncryptedData(updateUserEncryptedData) {
@@ -95,7 +95,7 @@ function updateUserEncryptedData(updateUserEncryptedData) {
     var oldMerkleRoot;
     var oldRSAkey;
 
-    return getParticipantRegistry('org.acme.biznet.User')
+    return getParticipantRegistry('org.kyc.User')
   .then(function (userRegistry) {
       return userRegistry.get(updateUserEncryptedData.hashed_id);
     })
@@ -120,13 +120,14 @@ function updateUserEncryptedData(updateUserEncryptedData) {
         user.userData.rsa_public_key = updateUserEncryptedData.newData.rsa_public_key;
     
         // Update the registry.
-        getParticipantRegistry('org.acme.biznet.User')
+        getParticipantRegistry('org.kyc.User')
         .then(function(userRegistry) {
           return userRegistry.update(user);
       });
+      
     
       // Emit an event for the modified user data.
-      var event = getFactory().newEvent('org.acme.biznet', 'UserEncryptedDataUpdated');
+      var event = getFactory().newEvent('org.kyc', 'UserEncryptedDataUpdated');
       event.user = user;
       event.oldName = oldName;
       event.oldEncryptedId = oldEncryptedId;
@@ -147,7 +148,7 @@ function updateUserEncryptedData(updateUserEncryptedData) {
 /**
 * Grants access to the user data by setting the user access variable to true,
 * then updates the ParticipantRegistry and emits a UserAccessRightsChanged event.
-* @param {org.acme.biznet.grantAccess} userGrantAccess The grantAccess transaction.
+* @param {org.kyc.grantAccess} userGrantAccess The grantAccess transaction.
 * @transaction
 */
 function grantAccess(userGrantAccess) {
@@ -157,7 +158,7 @@ function grantAccess(userGrantAccess) {
 /**
 * Revokes access to the user data by setting the user access variable to false,
 * then updates the ParticipantRegistry and emits a UserAccessRightsChanged event.
-* @param {org.acme.biznet.revokeAccess} userRevokeAccess The revokeAccess transaction.
+* @param {org.kyc.revokeAccess} userRevokeAccess The revokeAccess transaction.
 * @transaction
 */
 function revokeAccess(userRevokeAccess) {
@@ -168,7 +169,7 @@ function revokeAccess(userRevokeAccess) {
   Internal private functions
 */
 function modifyAccess(hashed_id, modifier) {
-    return getParticipantRegistry('org.acme.biznet.User')
+    return getParticipantRegistry('org.kyc.User')
   .then(function (userRegistry) {
       return userRegistry.get(hashed_id);
   })
@@ -179,13 +180,13 @@ function modifyAccess(hashed_id, modifier) {
         existingUser.access = modifier;
     
          // Update the registry.
-        getParticipantRegistry('org.acme.biznet.User')
+        getParticipantRegistry('org.kyc.User')
         .then(function(userRegistry) {
           return userRegistry.update(existingUser);
       });
         
       // Emit an event for the new user creation.
-      var event = getFactory().newEvent('org.acme.biznet', 'UserAccessRightsChanged');
+      var event = getFactory().newEvent('org.kyc', 'UserAccessRightsChanged');
       event.user = existingUser;
         event.oldValue = existingAccessValue;
         event.newValue = existingUser.access;
