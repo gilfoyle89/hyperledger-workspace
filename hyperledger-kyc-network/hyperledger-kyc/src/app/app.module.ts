@@ -36,7 +36,6 @@ import { revokeAccessComponent } from './revokeAccess/revokeAccess.component';
   declarations: [
     AppComponent,
     HomeComponent,
-,
     AdministratorComponent,
     UserComponent,
     getUserDataComponent,
