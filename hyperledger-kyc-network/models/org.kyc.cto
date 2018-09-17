@@ -15,35 +15,99 @@
 /**
  * Model definitions for KYC Business Network
  */
+ 
 
 namespace org.kyc
 
-enum type {
-  o INDIVIDUAL
-  o CORPORATE
-  o PUBLIC
+/*
+    Primitives:
+    String: a UTF8 encoded String.
+    Double: a double precision 64 bit numeric value.
+    Integer: a 32 bit signed whole number.
+    Long: a 64 bit signed whole number.
+    DateTime: an ISO-8601 compatible time instance, with optional time zone and UTZ offset.
+    Boolean: a Boolean value, either true or false.
+*/
+
+
+// concepts are abstract classes that are not
+// assets, transactions or participants
+concept UserData {
+    o String name
+    o String encrypted_id
+    o String postcode
+    o String birthdate
+    o String merkle_root
+    o String rsa_public_key
 }
 
-participant User identified by email {
-  o String email
-  o String firstName
-  o String lastName
-  o String address
-  o DateTime dateOfBirth
-  o String nationality
-  o type userType
-  --> FinancialInstitution[] approvedFinancialInstitutions
+participant Administrator identified by adminId {
+  o String adminId
 }
 
-participant FinancialInstitution identified by name {
-  o String name
+participant User identified by hashed_id {
+    o String hashed_id
+    o UserData userData
+    o Boolean access
 }
 
-abstract transaction PermissionTransaction {
-  o String userId
-}
-transaction AuthorizeAccess extends PermissionTransaction {
+// transactions are changes to the global state of
+// the blockchain that are recorded and can be queried
+
+transaction getUserData {
+    o User user
+    o UserData userData
 }
 
-transaction RevokeAccess extends PermissionTransaction {
+transaction createUser {
+  	o String hashed_id
+    o UserData userData
+    o Boolean access
 }
+
+transaction deleteUser {
+  	o String hashed_id
+}
+
+transaction updateUserEncryptedData {
+	o String hashed_id
+    o UserData newData
+}
+
+transaction grantAccess {
+    o String hashed_id
+}
+
+transaction revokeAccess {
+    o String hashed_id
+}
+
+event UserAccessRightsChanged {
+    o User user
+    o Boolean oldValue
+    o Boolean newValue
+}
+
+event NewUserCreated {
+    o User user
+}
+
+event UserDeleted {
+  	o String deleted_id
+}
+
+event UserEncryptedDataUpdated {
+  	o User user
+    o String oldName
+    o String oldEncryptedId
+    o String oldPostcode
+    o String oldBirthdate
+    o String oldMerkleRoot
+    o String oldRSAkey
+    o String newName
+    o String newEncryptedId
+    o String newPostcode
+    o String newBirthdate
+    o String newMerkleRoot
+    o String newRSAkey
+} 
