@@ -47,12 +47,3 @@ transaction AuthorizeAccess extends PermissionTransaction {
 
 transaction RevokeAccess extends PermissionTransaction {
 }
-
-transaction SampleTransaction { 
-  o String oldValue
-  o String newValue  
-}
-
-event SampleEvent {
-  
-}
