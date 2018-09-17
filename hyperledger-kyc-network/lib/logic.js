@@ -54,6 +54,7 @@ function createUser(createUser) {
 
 /**
 * Deletes a user with a specific hashed_id.
+
 * @param {org.kyc.deleteUser} deleteUser The deleteUser transaction.
 * @transaction
 */
@@ -124,7 +125,7 @@ function updateUserEncryptedData(updateUserEncryptedData) {
         .then(function(userRegistry) {
           return userRegistry.update(user);
       });
-      
+
     
       // Emit an event for the modified user data.
       var event = getFactory().newEvent('org.kyc', 'UserEncryptedDataUpdated');
