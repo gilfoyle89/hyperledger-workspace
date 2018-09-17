@@ -13,30 +13,37 @@
  */
 
 /**
- * Write your model definitions here
+ * Model definitions for KYC Business Network
  */
 
 namespace org.kyc
 
-participant SampleParticipant identified by participantId {
-  o String participantId
+enum type {
+  o INDIVIDUAL
+  o CORPORATE
+  o PUBLIC
+}
+
+participant User identified by email {
+  o String email
   o String firstName
   o String lastName
+  o String address
+  o DateTime dateOfBirth
+  o String nationality
+  o type userType
+  --> FinancialInstitution[] approvedFinancialInstitutions
 }
 
-asset SampleAsset identified by assetId {
-  o String assetId
-  --> SampleParticipant owner
-  o String value
+participant FinancialInstitution identified by name {
+  o String name
 }
 
-transaction SampleTransaction {
-  --> SampleAsset asset
-  o String newValue
+abstract transaction PermissionTransaction {
+  o String userId
+}
+transaction AuthorizeAccess extends PermissionTransaction {
 }
 
-event SampleEvent {
-  --> SampleAsset asset
-  o String oldValue
-  o String newValue
+transaction RevokeAccess extends PermissionTransaction {
 }
