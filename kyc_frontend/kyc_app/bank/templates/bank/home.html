@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome to the KYC Application!</h2>
+  <p class="lead">
+    If you already have an account, go ahead and <a href="{% url 'login' %}">log in</a>. If you are new to KYC Application, get started
+    by creating a <a href="{% url 'customer_signup' %}">customer account</a> or a <a href="{% url 'banker_signup' %}">banker account</a>.
+  </p>
+  <hr>
+  <h3>What's this about?</h3>
+  <p>
+    This KYC application is created to illustrate how to manage KYC using blockchain</a>.
+    In this application, users can sign up as a customer or a banker. Bankers can create approve applications and customers can submit their applications
+  </p>
+{% endblock %}
