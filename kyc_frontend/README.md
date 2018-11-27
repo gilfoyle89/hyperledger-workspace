@@ -17,6 +17,7 @@ pip install -r requirements.txt
 Create the database:
 
 ```bash
+cd kyc_app
 python manage.py migrate
 ```
 
