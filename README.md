@@ -1,7 +1,7 @@
 # hyperledger-workspace
 For running kyc-frontend
 
-cd kyc-frontend
+cd kyc-frontend \n
 pip install -r requirements.txt
 
 once this is done, run
