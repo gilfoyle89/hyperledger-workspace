@@ -4,8 +4,6 @@ from django.utils.translation import ugettext_lazy as _
 from viewflow import flow, frontend, lock
 from viewflow.base import this, Flow
 from viewflow.flow import views as flow_views
-
-
 from .models import KYCSubmitProcess
 
 
@@ -27,20 +25,20 @@ class KYCFlow(Flow):
     start = (
         flow.Start(
             flow_views.CreateProcessView,
-            fields=['text','first_name','last_name','email'],
+            fields=['text', 'first_name', 'last_name', 'email'],
             task_title=_('New KYC Case'))
-        .Permission(auto_create=True)
-        .Next(this.decide)
+            .Permission(auto_create=True)
+            .Next(this.decide)
     )
 
     decide = (
         flow.View(
-            flow_views.UpdateProcessView, fields=['approved','rejected'],
+            flow_views.UpdateProcessView, fields=['approved', 'rejected'],
             task_title=_('KYC Decision'),
             task_description=_("KYC Case Decision required"),
             task_result_summary=_("KYC Case was {{ process.approved|yesno:'Approved,Rejected' }}"))
-        .Permission(auto_create=True)
-        .Next(this.check_approve)
+            .Permission(auto_create=True)
+            .Next(this.check_approve)
     )
 
     check_approve = (
@@ -48,8 +46,8 @@ class KYCFlow(Flow):
             cond=lambda act: act.process.approved,
             task_title=_('Approval check'),
         )
-        .Then(this.send)
-        .Else(this.end)
+            .Then(this.send)
+            .Else(this.end)
 
     )
 
@@ -59,10 +57,10 @@ class KYCFlow(Flow):
 
     send = (
         flow.Handler(
-            this.send_hello_world_request,
-            task_title=_('Send message'),
+            this.update_block,
+            task_title=_('Process Completed'),
         )
-        .Next(this.end)
+            .Next(this.end)
     )
 
     end = flow.End(
@@ -71,6 +69,5 @@ class KYCFlow(Flow):
 
     )
 
-    def send_hello_world_request(self, activation):
-        with open(os.devnull, "w") as world:
-            world.write(activation.process.first_name)
+    def update_block(self, activation):
+        pass

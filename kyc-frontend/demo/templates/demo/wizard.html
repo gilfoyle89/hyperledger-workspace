@@ -30,56 +30,6 @@ tour.addStep('login', {
 });
 {% endif %}
 
-{% if user.username == 'shipment/worker' %}
-if($.cookie('examples.shipment/worker') === undefined) {
-    tour.addStep('shipment/worker', {
-      title: 'Welcome, Shipment/Worker',
-      text: ['You have access to Shipment Process',
-             'You can work on <b>"Package goods"</b> and <b>"Move package"</b> tasks'],
-      classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
-      attachTo: {element: 'li a[href="/workflow/"]', on: 'right'},
-      classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text z-index-1000',
-      buttons: [{ text: 'OK', action: tour.next }],
-      tetherOptions: {offset: '0px -20px 0px 0px'}
-    });
-    $.cookie('examples.shipment/worker', true);
-}
-{% endif %}
-
-{% if user.username == 'shipment/manager' %}
-if($.cookie('examples.shipment/manager') === undefined) {
-    tour.addStep('shipment/manager', {
-      title: 'Welcome, Shipment/Manager',
-      text: ['You have access to Shipment Process',
-             'You can work on <b>"Take extra insurance"</b> tasks'],
-      classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
-      attachTo: {element: 'li a[href="/workflow/"]', on: 'right'},
-      classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text z-index-1000',
-      buttons: [{ text: 'OK', action: tour.next }],
-      tetherOptions: {offset: '0px -20px 0px 0px'}
-    });
-    $.cookie('examples.shipment/manager', true);
-}
-{% endif %}
-
-{% if user.username == 'shipment/clerk' %}
-if($.cookie('examples.shipment/clerk') === undefined) {
-    tour.addStep('shipment/clerk', {
-      title: 'Welcome, Shipment/Clerk',
-      text: ['You have access to Shipment Process',
-             'You can <b>start</b> the Shipment process, work on <b>"Decide shipment type"</b>',
-             '<b>"Set delivery mode"</b>, <b>"Request quotes"</b>, <b>"Check insurance"</b>,',
-             'and <b>"Fill post label"</b> tasks'],
-      classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
-      attachTo: {element: 'li a[href="/workflow/"]', on: 'right'},
-      classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text z-index-1000',
-      buttons: [{ text: 'OK', action: tour.next }],
-      tetherOptions: {offset: '0px -20px 0px 0px'}
-    });
-    $.cookie('examples.shipment/clerk', true);
-}
-{% endif %}
-
 {% if user.username == 'amitauti' %}
 if($.cookie('customer') === undefined) {
     tour.addStep('customer', {

@@ -1,7 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc696eb6-c262-404d-8052-5bc120f2eca1" name="Default Changelist" comment="" />
+    <list default="true" id="bc696eb6-c262-404d-8052-5bc120f2eca1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kyc-frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db21.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/doc/HelloWorld.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/fixtures/helloworld/default_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/de/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/de/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/es/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/es/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/fr/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/fr/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/ko/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/ko/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/migrations/0002_auto_20181128_1111.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/migrations/0003_auto_20181128_1123.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/kyc_flow/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/static/demo/css/shepherd-theme-arrows.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/static/demo/js/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/static/demo/js/shepherd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/templates/demo/base_module.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/templates/demo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/templates/demo/wizard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/templates/material/frontend/base_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/activation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/decorators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/activation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/nodes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/actions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/detail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/views/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/flow/viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/static/viewflow/css/viewflow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/static/viewflow/js/jquery.selectable-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/static/viewflow/js/viewflow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/static/viewflow/sass/viewflow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/base_module.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/base_task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/process_cancel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/process_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/process_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/process_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/queue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/start.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/task_action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/task_assign.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/task_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/flow/task_unassign.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/includes/breadcrumb_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/includes/flow_start_actions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/includes/flows_start_actions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/includes/task_management_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/site_archive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/site_queue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/site_task_action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templates/viewflow/site_tasks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/templatetags/viewflow_frontend.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/frontend/viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/fsm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/de/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/de/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/es/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/es/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/fr/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/fr/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/ko/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/ko/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/ru/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/ru/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/lock.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/management/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/managers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/migrations/0002_fsmchange.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/migrations/0003_task_owner_permission_change.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/migrations/0004_extend_fields_length.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/migrations/0005_rename_flowcls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/migrations/0006_i18n.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/end.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/ifgate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/job.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/join.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/signal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/split.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/switch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/nodes/view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/templatetags/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/templatetags/viewflow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/token.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/viewflow/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/website.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pip_update.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +156,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/kyc_flow/flows.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="73" column="32" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="32" />
+            <state relative-caret-position="-1115">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -26,11 +169,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/viewflow/models.py">
+        <entry file="file://$PROJECT_DIR$/demo/kyc_flow/apps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1725">
+            <state relative-caret-position="138">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/kyc_flow/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,17 +193,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1622">
               <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/viewflow/activation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -77,11 +218,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pip_update.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" column="63" lean-forward="true" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+              <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -90,17 +231,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/manage.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/viewflow/flow/viewset.py">
+        <entry file="file://$PROJECT_DIR$/demo/website.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+            <state>
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,17 +282,18 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/demo/kyc_flow/flows.py" />
         <option value="$PROJECT_DIR$/demo/settings.py" />
         <option value="$PROJECT_DIR$/demo/viewflow/flow/views/list.py" />
         <option value="$PROJECT_DIR$/demo/viewflow/managers.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/viewflow/managers.py" />
         <option value="$PROJECT_DIR$/pip_update.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/demo/kyc_flow/flows.py" />
       </list>
     </option>
   </component>
@@ -171,6 +316,17 @@
             <path>
               <item name="kyc-frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="kyc-frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kyc-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kyc-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kyc-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kyc-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="kyc_flow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,12 +392,12 @@
       <updated>1543392769603</updated>
       <workItem from="1543394432720" duration="809000" />
       <workItem from="1543396538851" duration="147000" />
-      <workItem from="1543396793257" duration="3645000" />
+      <workItem from="1543396793257" duration="6013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4601000" />
+    <option name="totallyTimeSpent" value="6969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -285,13 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/kyc_flow/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/viewflow/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-349">
@@ -309,16 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="190" column="4" selection-start-line="190" selection-start-column="4" selection-end-line="190" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/kyc_flow/flows.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -400,9 +539,51 @@
     <entry file="file://$PROJECT_DIR$/pip_update.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="4" column="63" lean-forward="true" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/website.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/kyc_flow/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/kyc_flow/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/kyc_flow/flows.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1115">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
